@@ -1,0 +1,378 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    
+position: relative;
+}
+main{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    /* overflow: hidden; */
+
+}
+aside{
+    height: 100%;
+    width: 20%;
+    background-color:lightsteelblue;
+    transition: all 0.9s ease-in-out;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px 0px 2px black;
+    /* overflow: hidden; */
+}
+.sidebar__btn{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+}
+aside .add-button{
+    width: 2rem;
+    height: 2rem;
+    margin-top: 10px;
+    margin-left: 10px;
+    background:url('./images/noun-plus-869752.svg') no-repeat bottom;
+    background-size: contain;
+    border: none;
+    /* padding-top: 10px; */
+}
+aside .add-button:hover{
+    transform: scale(0.9);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+aside .menu-button{
+    
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    right: 7px;
+    background:url('./images/Xmark-solid.svg#black') no-repeat center;
+    margin-top: 7px;
+    
+    transition: all 0.9s ease-in-out;
+    border: none;
+}
+aside h3{
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bolder;
+    text-decoration: underline;
+    text-shadow: 2px 3px 4px black;
+
+}
+aside .search{
+    margin-left: 20px;
+    width: 80%;
+    position: relative;
+}
+aside input{
+    width: 100%;
+    padding: 5px;
+    outline: none;
+    border: solid 1px #999;
+    background-color: #999;
+    opacity: 0.5;
+}
+aside img{
+    width: 30px;
+    height: 30px;
+
+}
+.main-content{
+    display: flex;
+    flex-direction: column;
+
+}
+.workspace{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30rem;
+}
+.add-box{
+    width: 15rem;
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: white;
+
+}
+.add-box img:hover{
+    transform: scale(0.9);
+    transition: 0.8s all ease-in-out;
+}
+.add-box img{
+    width: 100%;
+    height: 100%;
+    border: 2px solid skyblue;
+    border-radius: 50%;
+    /* position: absolute; */
+    border-style: dashed;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    cursor: pointer;
+
+}
+.add-container{
+    position: absolute;
+    left: 550px;
+    top: 100px;
+    /* position: relative; */
+    height: 70vh;
+    z-index: 2;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 30vw;
+    padding-left: 30px;
+    padding-top: 50px ;
+    transition: all 0.8s ease-in-out;
+    display: none;
+}
+.add-container h2{
+    text-align: left;
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 1.5px solid #999;
+}
+.note-info{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 100%;
+    height: 60%;
+
+    position: relative;
+}
+.note-info .title, .desc{
+    width: 90%;
+    position: relative;
+
+}
+.note-info  input,textarea{
+    width: 100%;
+    height: 50%;
+    padding: 10px;
+    margin-top: 5px;
+    position: relative;
+
+}
+ .add-note{
+    position: relative;
+    width: 90%;
+    height: 10%;
+    background-color: cadetblue;
+    border: none;
+    cursor: pointer;
+    /* top: -89px; */
+}
+.add-container img{
+    width: 25px;
+    height: 21px;
+    position: absolute;
+    top: 5px;
+right: 9px;
+cursor: pointer;
+}
+ul:not(.more){
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    width: 95%;
+    height: 430px;
+    /* border: 1px solid #999; */
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 10px 20px;
+    margin-top: 20px;
+scroll-behavior: smooth;
+/* margin: auto; */
+scrollbar-width: thin;
+
+scrollbar-color: rgba(0, 0, 255, 0.322) lightsteelblue;
+
+
+
+}
+ul:not(.more)> li{
+    width: 107%;
+    height: 100px;
+    border: none;
+    border-radius: 5px;
+    overflow: hidden;
+    padding-bottom: 7px;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 20px;
+    background-color: white;
+    border-bottom-right-radius: 30px;
+    flex-shrink: 0;
+    cursor: pointer;
+
+position: relative;
+
+}
+ul:not(.more) > li h4{
+    border-bottom: 1px solid #999;
+}
+ul:not(.more) > li p{
+    overflow: hidden;
+    margin-top: 6px;
+    padding-bottom: 10px;
+    height: 60%;
+}
+aside span{
+    position: absolute;
+left: 119px;
+top: 3px;
+display: flex;
+flex-direction: column;
+width: 90px;
+height: 100px;
+}
+aside span img{
+    align-self: flex-end;
+}
+.more{
+    background-color: white;
+    list-style: none;
+    z-index: 2;
+    height: 59px;
+    width: 85PX;
+    border: 1px solid #999;
+    border-radius: 10px;
+    box-shadow: 1px 1px 0.5px rgba(0, 0, 0, 0.422);
+    display: none;
+    
+}
+.more > li{
+    padding: 4px;
+    padding-left: 4px;
+  border-radius: 10px;
+  padding-left: 14px;
+  display: flex;
+  border-radius: 6px;
+}
+.more > li img{
+    width: 30px;
+    height: 21px;
+    
+    
+}
+.more > li:hover{
+    cursor: pointer;
+    transform: scale(0.9);
+    box-shadow: 1px 0.5px 1px gray;
+    transition: all 0.6s ease-in-out;
+
+}
+.main-content{
+    width:80%;
+    height: 100%;
+    position: relative;
+    /* overflow: hidden; */
+
+}
+.tabs{
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    position: relative;
+    border-bottom: 1px solid #999;
+    column-gap: 10px;
+    padding: 4px 10px;
+
+/* justify-content: space-around; */
+}
+.home-btn{
+    border-radius: 50%;
+    width: 3rem;
+    height: 100%; 
+    border: none;
+}
+.home-btn svg{
+    height: 30px;
+}
+.note-tab{
+    /* border-top-left-radius: 20px;
+    border-top-right-radius: 20px; */
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 5px;
+
+}
+.note-tab img{
+    width: 20px;
+    height: 15px;
+    cursor: pointer;
+}
+.note-tab p{
+    height: 20px;
+    width: 130px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    text-align: left;
+    /* border: 1px solid gray; */
+}
+
+.note-file{
+    position: absolute;
+    height: 92%;
+    z-index: 0;
+    top: 48px;
+    padding: 20px 50px;
+    line-height: 30px;
+    text-align: left;
+    text-decoration: #999;
+    background-color: white;
+    width: 100%;
+    overflow: scroll;
+}
+.bar-btn{
+    position: absolute;
+    left: 2rem;
+    background-color: transparent;
+    border: none;
+    top: 1rem;
+    display: none;
+}
+.bar-btn img{
+    
+    width: 2rem;
+    height: 2rem;
+}
+@media (max-width: 600px) {
+    aside{
+       display: none;
+
+    }
+    .bar-btn{
+        display: block;
+        top:4rem;
+        left: 1rem;
+    }
+    .main-content{
+        width: 100%;
+    }
+}
